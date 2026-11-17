@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contoso Banque · Virement</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <main>
+      <p class="marque">Contoso Banque</p>
+      <h1>Nouveau virement</h1>
+      <p id="plafond" class="info"></p>
+      <form id="virement" novalidate>
+        <label>Compte à débiter
+          <select name="compte">
+            <option value="P-1001">Compte courant particulier · P-1001</option>
+            <option value="E-2001">Compte professionnel · E-2001</option>
+          </select>
+        </label>
+        <label>Montant
+          <input name="montant" inputmode="decimal" placeholder="1 250,00" autocomplete="off" />
+        </label>
+        <label>Libellé
+          <input name="libelle" maxlength="80" placeholder="Loyer" />
+        </label>
+        <button type="submit">Valider le virement</button>
+      </form>
+      <p id="message" role="status" aria-live="polite"></p>
+    </main>
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>
